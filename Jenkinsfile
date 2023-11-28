@@ -15,7 +15,7 @@ pipeline {
         }
         stage('buid') {
             steps{
-                sh 'mvn clen install'
+                sh 'mvn clean deploy'
             }
         }
     }
