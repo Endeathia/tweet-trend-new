@@ -96,7 +96,15 @@ pipeline {
                echo '<--------------- Docker Publish Ended --------------->'  
             }
         }
-    }   
+    } 
+
+    stage('Deplot to EKS') {
+        steps {
+            script {
+                sh './deploy.sh'
+            }
+        }
+    }  
   }
 }
     
